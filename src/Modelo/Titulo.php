@@ -26,4 +26,9 @@ class Titulo
 
         return $somaNotas / $quantidadeNotas;
     }
+
+    public function duracaoEmMinutos()
+    {
+        return 0;
+    }
 }

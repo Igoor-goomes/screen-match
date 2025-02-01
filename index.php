@@ -2,8 +2,9 @@
 
 require __DIR__ . "/src/Modelo/Genero.php";
 require __DIR__ . "/src/Modelo/Titulo.php";
-require __DIR__ . "/src/Modelo/Filme.php";
 require __DIR__ . "/src/Modelo/Serie.php";
+require __DIR__ . "/src/Modelo/Filme.php";
+require __DIR__ . "/src/Servicos/CalculadoraMaratona.php";
 
 echo "Seja bem vindo ao Screen Match";
 
@@ -17,5 +18,14 @@ $filme->avalia(8.2);
 var_dump($filme);
 
 
-echo "Média do filme é: " . $filme->media() . "\n";
-echo "Ano do Lancamento: " . $filme->anoLancamento . "\n";
+// echo "Média do filme é: " . $filme->media() . "\n";
+
+$serie = new Serie('Lost', 2007, Genero::Drama, 10, 20, 30);
+$serie->avalia(8);
+echo "Média da serie é: " . $serie->media() . "\n";
+
+$calculadora = new CalculadoraMaratona();
+$calculadora->incluiCalculo($filme);
+$calculadora->incluiCalculo($serie);
+$duracao = $calculadora->duracao();
+echo "Para essa maratona, você precisa de $duracao minutos \n";

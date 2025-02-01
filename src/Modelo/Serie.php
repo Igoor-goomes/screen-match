@@ -8,8 +8,13 @@ class Serie extends Titulo
         Genero $generoFilme,
         public readonly string $temporadas,
         public readonly string $episodioPorTemporada,
-        public readonly int $duracaoEpisodio 
+        public readonly int $duracaoEpisodio
     ) {
         parent::__construct($nomeFilme, $anoLancamento, $generoFilme);
+    }
+
+    public function duracaoEmMinutos(): int
+    {
+        return $this->temporadas * $this->episodioPorTemporada * $this->duracaoEpisodio;
     }
 }
