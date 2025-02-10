@@ -1,5 +1,5 @@
 <?php
-
+/*
 require __DIR__ . "/src/Modelo/Filme.php";
 require __DIR__ . "/src/funcoes.php";
 
@@ -62,4 +62,4 @@ file_put_contents(__DIR__ . '/filme.json', $filmeComoStringJson);
 $retornoFilmeArquivo = file_get_contents(__DIR__ . '/filme.json');
 $retornoFilmeJson = json_decode($retornoFilmeArquivo, true);
 
-var_dump($retornoFilmeJson);
+var_dump($retornoFilmeJson);*/
