@@ -1,5 +1,7 @@
 <?php
 
+namespace ScreenMatch\Modelo;
+
 abstract class Titulo implements Avaliavel
 {
     use ComAvaliacao;
@@ -14,4 +16,9 @@ abstract class Titulo implements Avaliavel
     }
 
     abstract public function duracaoEmMinutos(): int;
+
+    public function __toString(): string
+    {
+        return $this->nomeFilme;
+    }
 }

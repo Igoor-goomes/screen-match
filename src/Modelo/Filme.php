@@ -1,5 +1,5 @@
 <?php
-
+namespace ScreenMatch\Modelo;
 
 class Filme extends Titulo
 {

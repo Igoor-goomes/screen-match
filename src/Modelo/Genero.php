@@ -1,4 +1,6 @@
 <?php
+namespace ScreenMatch\Modelo;
+
 // enum -> é um tipo que permite enumerar um conjunto de valores possíveis.
 enum Genero
 {
