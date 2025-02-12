@@ -1,5 +1,8 @@
 <?php
+
 namespace ScreenMatch\Modelo;
+
+use Override;
 
 class Filme extends Titulo
 {
@@ -11,7 +14,7 @@ class Filme extends Titulo
     ) {
         parent::__construct($nomeFilme, $anoLancamento, $generoFilme);
     }
-
+    #[Override]
     public function duracaoEmMinutos(): int
     {
         return $this->duracaoEmMinutos;
